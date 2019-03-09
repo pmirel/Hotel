@@ -19,8 +19,6 @@ public class RoomRepository {
      */
     public RoomRepository(RoomValidator validator) {
         this.validator = validator;
-        // low coupling, high cohesion
-//        this.validator = new CarValidator();
     }
 
     // metode CRUD: Create, Read, Update, Delete
@@ -31,7 +29,7 @@ public class RoomRepository {
      */
     public void add(Room room) {
         if (storage.containsKey(room.getId())) {
-            throw new RuntimeException("A car with that id already exists!");
+            throw new RuntimeException("A room with that id already exists!");
         }
 
         validator.validate(room);
@@ -44,7 +42,7 @@ public class RoomRepository {
      */
     public void update(Room room) {
         if (!storage.containsKey(room.getId())) {
-            throw new RuntimeException("There is no car with the given id to update!");
+            throw new RuntimeException("There is no room with the given id to update!");
         }
 
         validator.validate(room);
@@ -52,12 +50,11 @@ public class RoomRepository {
     }
 
     /**
-     * @return a list of all cars.
+     * @return a list of all rooms.
      */
     public List<Room> getAll() {
 
         return new ArrayList<>(storage.values());
-//        return (List<Car>)storage.values();
-        //return storage.values().toArray();
+
     }
 }

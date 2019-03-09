@@ -34,7 +34,7 @@ public class RoomService {
         Room room = new Room(id, roomNumber, numberOfPersons, days);
         List<Room> rooms = repository.getAll();
         for (Room r : rooms) {
-            if (r.getRoomNumber() == roomNumber && !r.isAvailable()) {
+            if (r.getRoomNumber() == roomNumber && r.isAvailable()) {
                 throw new RuntimeException("The room is not available!");
             }
         }
@@ -62,7 +62,7 @@ public class RoomService {
             currentRoom.setAvailable(true);
             repository.update(currentRoom);
         } else {
-            throw new RuntimeException("There is no car on the given stand!");
+            throw new RuntimeException("The room is not occupied!");
         }
     }
 

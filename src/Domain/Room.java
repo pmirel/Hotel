@@ -5,7 +5,7 @@ public class Room {
     private String feedback;
     private boolean available;
 
-    public Room(int id, int numberOfPersons, int days, int roomNumber) {
+    public Room(int id,int roomNumber, int numberOfPersons, int days) {
         this.id = id;
         this.numberOfPersons = numberOfPersons;
         this.days = days;
@@ -29,8 +29,8 @@ public class Room {
                 ", roomNumber=" + roomNumber +
                 ", numberOfPersons='" + numberOfPersons + '\'' +
                 ", days=" + days +
-                ", occupid=" + available +
-                ", feedback='" + feedback + '\'' +
+                ", available=" + available +
+                //", feedback='" + feedback + '\'' +
                 '}';
     }
 

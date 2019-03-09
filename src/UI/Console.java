@@ -73,9 +73,9 @@ public class Console {
         try {
             System.out.println("Dati id-ul:");
             int id = Integer.parseInt(scanner.nextLine());
-            System.out.println("Dati standul:");
+            System.out.println("Dati camera:");
             int roomNumber = Integer.parseInt(scanner.nextLine());
-            System.out.println("Dati numarul de inmatriculare:");
+            System.out.println("Dati numarul de persoane:");
             int numberOfPersons = Integer.parseInt(scanner.nextLine());
             System.out.println("Dati numarul de zile:");
             int days = Integer.parseInt(scanner.nextLine());
