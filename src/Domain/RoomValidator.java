@@ -13,10 +13,10 @@ public class RoomValidator {
         if(room.isAvailable() && room.getRoomNumber() <= 0){
             throw new RuntimeException("Room dosen't exist");
         }
-//        String feedback=room.getFeedback();
-//        if(feedback.isEmpty()){
-//            throw new RuntimeException("Feedback missing");
-//        }
+        String feedback = room.getFeedback();
+        if (feedback.isEmpty()) {
+            throw new RuntimeException("Feedback missing");
+        }
         if(room.getRating()<1 && room.getRating()>5) {
         throw new RuntimeException("Rating is between 1 and 5");
         }
