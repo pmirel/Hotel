@@ -10,6 +10,7 @@ public class Main {
         RoomRepository repository = new RoomRepository(validator);
         RoomService room = new RoomService(repository);
         Console console = new Console(room);
+
         console.run();
     }
 }
